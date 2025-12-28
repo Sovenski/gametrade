@@ -1,0 +1,66 @@
+# Unreal Engine
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Script/
+enc_temp_folder/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+
+# Rider
+.idea/
+*.sln.iml
+
+# Compiled Source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Unreal-specific
+*.sln
+*.xcodeproj
+*.xcworkspace
+
+# Content (binary files - too large for git)
+# Content/**/*.uasset
+# Content/**/*.umap
+# Comment out above lines if you want to track assets
+
+# Starter Content
+/Content/StarterContent/
+
+# Autosaves
+*_BuiltData.uasset
