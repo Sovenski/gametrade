@@ -23,6 +23,8 @@ enum class EResourceType : uint8
 	Hops UMETA(DisplayName = "Hops"),
 	Flax UMETA(DisplayName = "Flax"),
 	Hemp UMETA(DisplayName = "Hemp"),
+	Rice UMETA(DisplayName = "Rice"),
+	Citrus UMETA(DisplayName = "Citrus"),
 
 	// Livestock
 	Cattle UMETA(DisplayName = "Cattle"),
@@ -42,8 +44,10 @@ enum class EResourceType : uint8
 	Copper UMETA(DisplayName = "Copper"),
 	Tin UMETA(DisplayName = "Tin"),
 	Silver UMETA(DisplayName = "Silver"),
+	Gold UMETA(DisplayName = "Gold"),
 	Salt UMETA(DisplayName = "Salt"),
 	Stone UMETA(DisplayName = "Stone"),
+	Marble UMETA(DisplayName = "Marble"),
 
 	// Fishing
 	Herring UMETA(DisplayName = "Herring"),
@@ -58,16 +62,20 @@ enum class EResourceType : uint8
 	OliveOil UMETA(DisplayName = "Olive Oil"),
 	Leather UMETA(DisplayName = "Leather"),
 	WoolenCloth UMETA(DisplayName = "Woolen Cloth"),
+	Linen UMETA(DisplayName = "Linen"),
 	Planks UMETA(DisplayName = "Planks"),
 	Charcoal UMETA(DisplayName = "Charcoal"),
 	SmokedMeat UMETA(DisplayName = "Smoked Meat"),
 	IronBars UMETA(DisplayName = "Iron Bars"),
 	Bronze UMETA(DisplayName = "Bronze"),
 	SilverIngots UMETA(DisplayName = "Silver Ingots"),
+	GoldIngots UMETA(DisplayName = "Gold Ingots"),
+	Cheese UMETA(DisplayName = "Cheese"),
 
 	// Tier 3 - Manufactured Goods
 	Garments UMETA(DisplayName = "Garments"),
 	LuxuryCloth UMETA(DisplayName = "Luxury Cloth"),
+	Cloth UMETA(DisplayName = "Cloth"),
 	Tools UMETA(DisplayName = "Tools"),
 	Weapons UMETA(DisplayName = "Weapons"),
 	Armor UMETA(DisplayName = "Armor"),
@@ -75,13 +83,17 @@ enum class EResourceType : uint8
 	Boots UMETA(DisplayName = "Boots"),
 	Saddles UMETA(DisplayName = "Saddles"),
 	Silverware UMETA(DisplayName = "Silverware"),
+	Ships UMETA(DisplayName = "Ships"),
+	Medicine UMETA(DisplayName = "Medicine"),
 
 	// Tier 4 - Luxury & Exotic
 	Silk UMETA(DisplayName = "Silk"),
+	RawSilk UMETA(DisplayName = "Raw Silk"),
 	Spices UMETA(DisplayName = "Spices"),
 	Dyes UMETA(DisplayName = "Dyes"),
 	Amber UMETA(DisplayName = "Amber"),
 	VenetianGlass UMETA(DisplayName = "Venetian Glass"),
+	Glass UMETA(DisplayName = "Glass"),
 	Tapestries UMETA(DisplayName = "Tapestries"),
 
 	MAX UMETA(Hidden)
@@ -121,7 +133,12 @@ enum class ETerritoryType : uint8
 	Castile_Crown UMETA(DisplayName = "Crown of Castile"),
 	Aragon_Crown UMETA(DisplayName = "Crown of Aragon"),
 	Poland_Kingdom UMETA(DisplayName = "Kingdom of Poland"),
-	Hungary_Kingdom UMETA(DisplayName = "Kingdom of Hungary")
+	Hungary_Kingdom UMETA(DisplayName = "Kingdom of Hungary"),
+	Portugal_Kingdom UMETA(DisplayName = "Kingdom of Portugal"),
+	Sweden_Kingdom UMETA(DisplayName = "Kingdom of Sweden"),
+	Denmark_Kingdom UMETA(DisplayName = "Kingdom of Denmark"),
+	Norway_Kingdom UMETA(DisplayName = "Kingdom of Norway"),
+	Granada_Kingdom UMETA(DisplayName = "Emirate of Granada")
 };
 
 UENUM(BlueprintType)
