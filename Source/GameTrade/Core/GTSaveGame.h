@@ -33,51 +33,51 @@ public:
 	FString PlayerFamilyName;
 
 	// Game state
-	UPROPERTY(SaveGame, Category = "Game State")
+	UPROPERTY(SaveGame)
 	FGameDate CurrentDate;
 
-	UPROPERTY(SaveGame, Category = "Game State")
+	UPROPERTY(SaveGame)
 	FString PlayerFamilyID;
 
-	UPROPERTY(SaveGame, Category = "Game State")
+	UPROPERTY(SaveGame)
 	FString PlayerCharacterID;
 
 	// Economy state
-	UPROPERTY(SaveGame, Category = "Economy")
+	UPROPERTY(SaveGame)
 	TMap<FString, FSettlementData> Settlements;
 
 	// Family & Characters
-	UPROPERTY(SaveGame, Category = "Dynasty")
+	UPROPERTY(SaveGame)
 	TMap<FString, FCharacterData> Characters;
 
-	UPROPERTY(SaveGame, Category = "Dynasty")
+	UPROPERTY(SaveGame)
 	TArray<FString> FamilyMemberIDs; // All members of player's family
 
 	// Buildings & Production
-	UPROPERTY(SaveGame, Category = "Economy")
+	UPROPERTY(SaveGame)
 	TMap<FString, FBuildingData> Buildings;
 
 	// Trade
-	UPROPERTY(SaveGame, Category = "Trade")
+	UPROPERTY(SaveGame)
 	TMap<FString, FCaravanData> Caravans;
 
 	// Player resources
-	UPROPERTY(SaveGame, Category = "Player")
+	UPROPERTY(SaveGame)
 	float Gold;
 
-	UPROPERTY(SaveGame, Category = "Player")
+	UPROPERTY(SaveGame)
 	TArray<FResourceAmount> Inventory;
 
 	// Statistics
-	UPROPERTY(SaveGame, Category = "Stats")
+	UPROPERTY(SaveGame)
 	int32 TotalTurnsPlayed;
 
-	UPROPERTY(SaveGame, Category = "Stats")
+	UPROPERTY(SaveGame)
 	float TotalGoldEarned;
 
-	UPROPERTY(SaveGame, Category = "Stats")
+	UPROPERTY(SaveGame)
 	int32 TotalTradesMade;
 
-	UPROPERTY(SaveGame, Category = "Stats")
+	UPROPERTY(SaveGame)
 	int32 BuildingsOwned;
 };
