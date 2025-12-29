@@ -1,0 +1,95 @@
+CityName,MedievalName,Latitude,Longitude,Elevation,Population,PoliticalEntity,TradeImportance,OnSilkRoad,OnHanseaticRoute,OnMediterraneanRoute,RiverName,TerrainType,ClimateZone
+London,London,51.5074,-0.1278,15,80000,Kingdom of England,9,0,0,0,Thames,Plains,Oceanic
+Paris,Paris,48.8566,2.3522,35,200000,Kingdom of France,10,0,0,0,Seine,Plains,Oceanic
+Venezia,Venice,45.4408,12.3155,2,100000,Republic of Venice,10,1,0,1,,,Mediterranean
+Roma,Rome,41.9028,12.4964,21,50000,Papal States,8,0,0,1,Tiber,Hills,Mediterranean
+München,Munich,48.1351,11.5820,520,15000,Bavaria,6,0,0,0,,Plains,Continental
+Wien,Vienna,48.2082,16.3738,171,25000,Archduchy of Austria,8,1,0,0,Danube,Plains,Continental
+Praha,Prague,50.0755,14.4378,195,40000,Kingdom of Bohemia,7,0,0,0,Vltava,Hills,Continental
+Köln,Cologne,50.9375,6.9603,53,30000,Archbishopric of Cologne,7,0,0,0,Rhine,Plains,Oceanic
+Frankfurt,Frankfurt am Main,50.1109,8.6821,112,10000,Free City of Frankfurt,8,0,0,0,Main,Plains,Continental
+Nürnberg,Nuremberg,49.4521,11.0767,309,20000,Free City of Nürnberg,7,0,0,0,,Hills,Continental
+Augsburg,Augsburg,48.3705,10.8978,494,18000,Free City of Augsburg,7,0,0,0,,Plains,Continental
+Hamburg,Hamburg,53.5511,9.9937,6,16000,Free City of Hamburg,8,0,1,0,Elbe,Plains,Oceanic
+Lübeck,Lübeck,53.8655,10.6866,13,25000,Free City of Lübeck,9,0,1,0,,Coast,Oceanic
+Bremen,Bremen,53.0793,8.8017,11,12000,Free City of Bremen,6,0,1,0,Weser,Plains,Oceanic
+Bruges,Bruges,51.2093,3.2247,5,45000,County of Flanders,9,0,1,0,,Plains,Oceanic
+Ghent,Ghent,51.0543,3.7174,9,50000,County of Flanders,9,0,0,0,Scheldt,Plains,Oceanic
+Antwerp,Antwerp,51.2194,4.4025,7,30000,Duchy of Brabant,8,0,1,0,Scheldt,Plains,Oceanic
+Lyon,Lyon,45.7640,4.8357,173,35000,Kingdom of France,8,1,0,0,Rhone,Plains,Oceanic
+Marseille,Marseille,43.2965,5.3698,12,28000,Provence,8,1,0,1,,Coast,Mediterranean
+Bordeaux,Bordeaux,44.8378,-0.5792,6,30000,Duchy of Aquitaine,7,0,0,0,Garonne,Plains,Oceanic
+Toulouse,Toulouse,43.6047,1.4442,141,25000,County of Toulouse,6,0,0,0,Garonne,Plains,Oceanic
+Milano,Milan,45.4642,9.1900,122,100000,Duchy of Milan,9,1,0,1,,Plains,Continental
+Genova,Genoa,44.4056,8.9463,20,80000,Republic of Genoa,9,1,0,1,,Coast,Mediterranean
+Firenze,Florence,43.7696,11.2558,50,60000,Republic of Florence,9,1,0,1,Arno,Hills,Mediterranean
+Napoli,Naples,40.8518,14.2681,17,50000,Kingdom of Naples,7,0,0,1,,Coast,Mediterranean
+Barcelona,Barcelona,41.3851,2.1734,12,35000,Crown of Aragon,8,1,0,1,,Coast,Mediterranean
+Valencia,Valencia,39.4699,-0.3763,15,25000,Crown of Aragon,7,0,0,1,,Coast,Mediterranean
+Sevilla,Seville,37.3891,-5.9845,7,40000,Crown of Castile,7,0,0,0,Guadalquivir,Plains,Mediterranean
+Toledo,Toledo,39.8628,-4.0273,529,30000,Crown of Castile,6,0,0,0,,Hills,Mediterranean
+Lisboa,Lisbon,38.7223,-9.1393,2,25000,Kingdom of Portugal,7,0,0,1,Tagus,Coast,Mediterranean
+Kraków,Krakow,50.0647,19.9450,219,20000,Kingdom of Poland,7,1,0,0,Vistula,Plains,Continental
+Danzig,Gdansk,54.3520,18.6466,5,15000,Teutonic Order,7,0,1,0,Vistula,Coast,Oceanic
+Buda,Budapest,47.4979,19.0402,102,25000,Kingdom of Hungary,7,1,0,0,Danube,Plains,Continental
+Stockholm,Stockholm,59.3293,18.0686,28,10000,Kingdom of Sweden,6,0,1,0,,Coast,Nordic
+København,Copenhagen,55.6761,12.5683,10,12000,Kingdom of Denmark,6,0,1,0,,Coast,Oceanic
+Rouen,Rouen,49.4432,1.0993,12,30000,Duchy of Normandy,7,0,0,0,Seine,Plains,Oceanic
+Reims,Reims,49.2583,4.0317,83,18000,Champagne,7,0,0,0,,Plains,Continental
+Dijon,Dijon,47.3220,5.0415,245,15000,Duchy of Burgundy,6,0,0,0,,Plains,Continental
+Strasbourg,Strasbourg,48.5734,7.7521,142,18000,Free City of Strasbourg,7,0,0,0,Rhine,Plains,Continental
+Basel,Basel,47.5596,7.5886,260,10000,Basel,6,0,0,0,Rhine,Plains,Continental
+Zürich,Zurich,47.3769,8.5417,408,8000,Zürich,6,0,0,0,,Hills,Alpine
+Geneva,Geneva,46.2044,6.1432,375,7000,Geneva,6,0,0,0,,Lake,Alpine
+Innsbruck,Innsbruck,47.2692,11.4041,574,5000,County of Tyrol,5,1,0,0,Inn,Mountains,Alpine
+Salzburg,Salzburg,47.8095,13.0550,424,12000,Archbishopric of Salzburg,6,0,0,0,Salzach,Hills,Alpine
+Regensburg,Regensburg,49.0134,12.1016,337,12000,Free City of Regensburg,6,0,0,0,Danube,Plains,Continental
+Dresden,Dresden,51.0504,13.7373,113,8000,Margraviate of Meissen,5,0,0,0,Elbe,Plains,Continental
+Leipzig,Leipzig,51.3397,12.3731,113,10000,Margraviate of Meissen,6,0,0,0,,Plains,Continental
+Erfurt,Erfurt,50.9848,11.0299,194,12000,Mainz,6,0,0,0,,Plains,Continental
+Magdeburg,Magdeburg,52.1205,11.6276,56,15000,Archbishopric of Magdeburg,6,0,0,0,Elbe,Plains,Continental
+Amsterdam,Amsterdam,52.3676,4.9041,2,12000,County of Holland,7,0,1,0,Amstel,Plains,Oceanic
+Rotterdam,Rotterdam,51.9225,4.4792,3,10000,County of Holland,6,0,1,0,Rhine,Plains,Oceanic
+Utrecht,Utrecht,52.0907,5.1214,5,15000,Bishopric of Utrecht,6,0,0,0,Rhine,Plains,Oceanic
+Bristol,Bristol,51.4545,-2.5879,11,15000,Kingdom of England,7,0,0,0,Avon,Coast,Oceanic
+York,York,53.9591,-1.0815,17,13000,Kingdom of England,6,0,0,0,Ouse,Plains,Oceanic
+Norwich,Norwich,52.6309,1.2974,15,10000,Kingdom of England,6,0,0,0,,Plains,Oceanic
+Southampton,Southampton,50.9097,-1.4044,3,8000,Kingdom of England,6,0,0,0,,Coast,Oceanic
+Edinburgh,Edinburgh,55.9533,-3.1883,47,10000,Kingdom of Scotland,5,0,0,0,,Hills,Oceanic
+Dublin,Dublin,53.3498,-6.2603,17,8000,Lordship of Ireland,5,0,0,0,Liffey,Coast,Oceanic
+Orléans,Orleans,47.9029,1.9093,116,18000,Kingdom of France,6,0,0,0,Loire,Plains,Oceanic
+Tours,Tours,47.3941,0.6848,49,15000,Kingdom of France,6,0,0,0,Loire,Plains,Oceanic
+Nantes,Nantes,47.2184,-1.5536,8,20000,Duchy of Brittany,7,0,0,0,Loire,Plains,Oceanic
+Amiens,Amiens,49.8942,2.2958,33,20000,Kingdom of France,6,0,0,0,Somme,Plains,Oceanic
+Troyes,Troyes,48.2973,4.0744,113,15000,Champagne,7,0,0,0,Seine,Plains,Continental
+Avignon,Avignon,43.9493,4.8055,23,30000,Papal States,7,0,0,1,Rhone,Plains,Mediterranean
+Montpellier,Montpellier,43.6108,3.8767,27,25000,Kingdom of France,7,0,0,1,,Coast,Mediterranean
+Pisa,Pisa,43.7228,10.4017,4,20000,Republic of Pisa,7,0,0,1,Arno,Plains,Mediterranean
+Siena,Siena,43.3188,11.3307,322,18000,Republic of Siena,6,0,0,1,,Hills,Mediterranean
+Bologna,Bologna,44.4949,11.3426,54,30000,Papal States,7,0,0,1,,Plains,Continental
+Padova,Padua,45.4064,11.8768,12,25000,Republic of Venice,6,0,0,1,,Plains,Continental
+Verona,Verona,45.4384,10.9916,59,20000,Visconti,6,0,0,1,Adige,Plains,Continental
+Ferrara,Ferrara,44.8381,11.6198,9,18000,Este,6,0,0,1,Po,Plains,Continental
+Mantova,Mantua,45.1564,10.7914,19,15000,Gonzaga,5,0,0,1,,Plains,Continental
+Parma,Parma,44.8015,10.3279,57,12000,Visconti,5,0,0,1,,Plains,Continental
+Palermo,Palermo,38.1157,13.3615,14,30000,Kingdom of Sicily,7,0,0,1,,Coast,Mediterranean
+Messina,Messina,38.1938,15.5540,3,25000,Kingdom of Sicily,6,0,0,1,,Coast,Mediterranean
+Zaragoza,Zaragoza,41.6488,-0.8891,199,20000,Crown of Aragon,6,0,0,0,Ebro,Plains,Continental
+Córdoba,Cordoba,37.8882,-4.7794,123,25000,Crown of Castile,6,0,0,0,Guadalquivir,Plains,Mediterranean
+Granada,Granada,37.1773,-3.5986,738,50000,Emirate of Granada,7,0,0,0,,Hills,Mediterranean
+Porto,Porto,41.1579,-8.6291,104,15000,Kingdom of Portugal,6,0,0,1,Douro,Coast,Mediterranean
+Coimbra,Coimbra,40.2033,-8.4103,79,12000,Kingdom of Portugal,5,0,0,0,Mondego,Hills,Mediterranean
+Breslau,Wroclaw,51.1079,17.0385,111,10000,Kingdom of Bohemia,6,0,0,0,Oder,Plains,Continental
+Königsberg,Kaliningrad,54.7104,20.4522,5,8000,Teutonic Order,5,0,1,0,,Coast,Continental
+Riga,Riga,56.9496,24.1052,7,7000,Livonian Order,6,0,1,0,Daugava,Coast,Continental
+Visby,Visby,57.6348,18.2948,5,5000,Kingdom of Sweden,6,0,1,0,,Coast,Nordic
+Bergen,Bergen,60.3913,5.3221,12,6000,Kingdom of Norway,6,0,1,0,,Coast,Nordic
+Oslo,Oslo,59.9139,10.7522,23,5000,Kingdom of Norway,5,0,1,0,,Coast,Nordic
+Malmö,Malmo,55.6050,13.0038,12,4000,Kingdom of Denmark,5,0,1,0,,Coast,Oceanic
+Aachen,Aachen,50.7753,6.0839,173,12000,Free City of Aachen,6,0,0,0,,Hills,Oceanic
+Mainz,Mainz,50.0008,8.2713,83,10000,Archbishopric of Mainz,6,0,0,0,Rhine,Plains,Continental
+Trier,Trier,49.7490,6.6371,124,8000,Archbishopric of Trier,5,0,0,0,Moselle,Hills,Oceanic
+Metz,Metz,49.1193,6.1757,173,10000,Bishopric of Metz,6,0,0,0,Moselle,Plains,Continental
+Konstanz,Constance,47.6633,9.1753,395,6000,Bishopric of Constance,5,0,0,0,Rhine,Lake,Alpine
+Ulm,Ulm,48.4011,9.9876,479,8000,Free City of Ulm,5,0,0,0,Danube,Plains,Continental
+Freiburg,Freiburg,47.9990,7.8421,278,7000,Austria,5,0,0,0,,Hills,Continental

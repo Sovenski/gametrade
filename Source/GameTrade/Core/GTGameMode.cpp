@@ -9,6 +9,7 @@
 #include "Systems/GTDynastySubsystem.h"
 #include "Systems/GTEventSubsystem.h"
 #include "Systems/GTHierarchicalEconomySubsystem.h"
+#include "Systems/GTWorldMapSubsystem.h"
 #include "Kismet/GameplayStatics.h"
 
 AGTGameMode::AGTGameMode()
@@ -31,6 +32,14 @@ void AGTGameMode::BeginPlay()
 	UGTTimeSubsystem* TimeSubsystem = GameInstance->GetSubsystem<UGTTimeSubsystem>();
 	UGTEconomySubsystem* EconomySubsystem = GameInstance->GetSubsystem<UGTEconomySubsystem>();
 	UGTHierarchicalEconomySubsystem* HierarchyEconomy = GameInstance->GetSubsystem<UGTHierarchicalEconomySubsystem>();
+	UGTWorldMapSubsystem* WorldMap = GameInstance->GetSubsystem<UGTWorldMapSubsystem>();
+
+	// Initialize world map with real geography
+	if (WorldMap)
+	{
+		WorldMap->InitializeWorldMap(); // Load cities, rivers, trade routes
+		WorldMap->IntegrateWithHierarchicalEconomy(); // Create holdings from real cities
+	}
 
 	// Bind to time events
 	if (TimeSubsystem)

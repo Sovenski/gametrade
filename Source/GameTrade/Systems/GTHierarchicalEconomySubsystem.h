@@ -32,6 +32,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
 	void BuildHierarchyFromLegacyData();
 
+	/** Add a holding to the hierarchy (used by world map integration) */
+	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
+	void AddHolding(const FHoldingData& HoldingData);
+
 	/** Get holding by ID */
 	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
 	FHoldingData* GetHolding(const FString& HoldingID);

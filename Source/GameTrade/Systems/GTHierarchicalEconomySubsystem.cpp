@@ -112,6 +112,21 @@ void UGTHierarchicalEconomySubsystem::BuildHierarchyFromLegacyData()
 	GeneratePassiveTradeNetwork();
 }
 
+void UGTHierarchicalEconomySubsystem::AddHolding(const FHoldingData& HoldingData)
+{
+	// Generate unique ID for holding if not provided
+	FString HoldingID = HoldingData.HoldingName + TEXT("_") +
+		UEnum::GetValueAsString(HoldingData.HoldingType);
+
+	// Add to holdings map
+	AllHoldings.Add(HoldingID, HoldingData);
+
+	UE_LOG(LogTemp, Log, TEXT("Added holding: %s (Type: %s, Pop: %d)"),
+		*HoldingData.HoldingName,
+		*UEnum::GetValueAsString(HoldingData.HoldingType),
+		HoldingData.Population);
+}
+
 FHoldingData* UGTHierarchicalEconomySubsystem::GetHolding(const FString& HoldingID)
 {
 	return AllHoldings.Find(HoldingID);
