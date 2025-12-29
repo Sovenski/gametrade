@@ -8,6 +8,7 @@
 #include "Systems/GTTradeSubsystem.h"
 #include "Systems/GTDynastySubsystem.h"
 #include "Systems/GTEventSubsystem.h"
+#include "Systems/GTHierarchicalEconomySubsystem.h"
 #include "Kismet/GameplayStatics.h"
 
 AGTGameMode::AGTGameMode()
@@ -29,6 +30,7 @@ void AGTGameMode::BeginPlay()
 
 	UGTTimeSubsystem* TimeSubsystem = GameInstance->GetSubsystem<UGTTimeSubsystem>();
 	UGTEconomySubsystem* EconomySubsystem = GameInstance->GetSubsystem<UGTEconomySubsystem>();
+	UGTHierarchicalEconomySubsystem* HierarchyEconomy = GameInstance->GetSubsystem<UGTHierarchicalEconomySubsystem>();
 
 	// Bind to time events
 	if (TimeSubsystem)
@@ -42,6 +44,13 @@ void AGTGameMode::BeginPlay()
 	if (EconomySubsystem)
 	{
 		EconomySubsystem->InitializeEconomy();
+	}
+
+	// Initialize hierarchical economy (CK3-style settlements)
+	if (HierarchyEconomy)
+	{
+		HierarchyEconomy->BuildHierarchyFromLegacyData();
+		HierarchyEconomy->SpawnAIMerchantDynasties(4); // Spawn 4 AI merchant families
 	}
 }
 
@@ -63,6 +72,7 @@ void AGTGameMode::NextTurn()
 	UGTTradeSubsystem* TradeSubsystem = GameInstance->GetSubsystem<UGTTradeSubsystem>();
 	UGTDynastySubsystem* DynastySubsystem = GameInstance->GetSubsystem<UGTDynastySubsystem>();
 	UGTEventSubsystem* EventSubsystem = GameInstance->GetSubsystem<UGTEventSubsystem>();
+	UGTHierarchicalEconomySubsystem* HierarchyEconomy = GameInstance->GetSubsystem<UGTHierarchicalEconomySubsystem>();
 
 	UE_LOG(LogTemp, Log, TEXT("=== TURN PROCESSING START ==="));
 
@@ -78,31 +88,36 @@ void AGTGameMode::NextTurn()
 		ProductionSubsystem->ProcessProductionTurn();
 	}
 
-	// 3. Process caravan travel
+	// 3. Process hierarchical economy (new CK3-style system)
+	// This handles: passive trade, population growth, AI merchants, layered economies
+	if (HierarchyEconomy)
+	{
+		HierarchyEconomy->ProcessHierarchicalEconomyTurn();
+	}
+
+	// 4. Process caravan travel (legacy system - still used for long-distance player routes)
 	if (TradeSubsystem)
 	{
 		TradeSubsystem->ProcessCaravansTurn();
 	}
 
-	// 4. Process economy (supply/demand/prices)
+	// 5. Process economy (legacy supply/demand/prices - now complemented by hierarchical system)
 	if (EconomySubsystem)
 	{
 		EconomySubsystem->ProcessEconomyTurn();
 	}
 
-	// 5. Process dynasty (aging, births, deaths)
+	// 6. Process dynasty (aging, births, deaths)
 	if (DynastySubsystem)
 	{
 		DynastySubsystem->ProcessAgingTurn();
 	}
 
-	// 6. Process/generate events
+	// 7. Process/generate events
 	if (EventSubsystem)
 	{
 		EventSubsystem->ProcessEventsTurn();
 	}
-
-	// TODO: Process AI families
 
 	UE_LOG(LogTemp, Log, TEXT("=== TURN PROCESSING COMPLETE ==="));
 }
