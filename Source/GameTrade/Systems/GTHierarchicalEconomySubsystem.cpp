@@ -132,6 +132,17 @@ FHoldingData* UGTHierarchicalEconomySubsystem::GetHolding(const FString& Holding
 	return AllHoldings.Find(HoldingID);
 }
 
+bool UGTHierarchicalEconomySubsystem::GetHoldingCopy(const FString& HoldingID, FHoldingData& OutHolding)
+{
+	FHoldingData* Holding = AllHoldings.Find(HoldingID);
+	if (Holding)
+	{
+		OutHolding = *Holding;
+		return true;
+	}
+	return false;
+}
+
 TArray<FHoldingData*> UGTHierarchicalEconomySubsystem::GetHoldingsInCounty(const FString& CountyID)
 {
 	TArray<FHoldingData*> Holdings;

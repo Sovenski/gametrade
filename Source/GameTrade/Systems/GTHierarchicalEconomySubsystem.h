@@ -36,16 +36,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
 	void AddHolding(const FHoldingData& HoldingData);
 
-	/** Get holding by ID */
-	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
+	/** Get holding by ID (C++ only, returns pointer) */
 	FHoldingData* GetHolding(const FString& HoldingID);
 
-	/** Get all holdings in a county */
+	/** Get holding by ID (Blueprint-safe, returns copy) */
 	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
+	bool GetHoldingCopy(const FString& HoldingID, FHoldingData& OutHolding);
+
+	/** Get all holdings in a county (C++ only) */
 	TArray<FHoldingData*> GetHoldingsInCounty(const FString& CountyID);
 
-	/** Get all counties in a duchy */
-	UFUNCTION(BlueprintCallable, Category = "Hierarchy")
+	/** Get all counties in a duchy (C++ only) */
 	TArray<FCountyData*> GetCountiesInDuchy(const FString& DuchyID);
 
 	// ========== PASSIVE TRADE SYSTEM ==========

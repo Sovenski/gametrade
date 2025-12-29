@@ -121,8 +121,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Buildings")
 	bool AssignWorkersToBuilding(const FString& BuildingID, int32 NumWorkers);
 
-	/** Get building by ID */
-	UFUNCTION(BlueprintCallable, Category = "Buildings")
+	/** Get building by ID (C++ only, returns pointer) */
 	FMarketBuilding* GetBuilding(const FString& BuildingID);
 
 	// ========== POP MANAGEMENT ==========
@@ -131,8 +130,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Pops")
 	FString CreatePopGroup(const FString& MarketName, EPopClass PopClass, int32 Size);
 
-	/** Get pop by ID */
-	UFUNCTION(BlueprintCallable, Category = "Pops")
+	/** Get pop by ID (C++ only, returns pointer) */
 	FPopGroup* GetPop(const FString& PopID);
 
 	/** Promote pop to higher class (craftsman → merchant) */
@@ -141,8 +139,7 @@ public:
 
 	// ========== MARKET QUERIES ==========
 
-	/** Get market by name */
-	UFUNCTION(BlueprintCallable, Category = "Market")
+	/** Get market by name (C++ only, returns pointer) */
 	FLocalMarket* GetMarket(const FString& MarketName);
 
 	/** Get current price of good in market */

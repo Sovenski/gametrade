@@ -138,9 +138,12 @@ public:
 
 	// ========== HISTORICAL DATA QUERIES ==========
 
-	/** Get city data by name */
-	UFUNCTION(BlueprintCallable, Category = "World Map")
+	/** Get city data by name (C++ only, returns pointer) */
 	FHistoricalCityData* GetCityData(const FString& CityName);
+
+	/** Get city data by name (Blueprint-safe, returns copy) */
+	UFUNCTION(BlueprintCallable, Category = "World Map")
+	bool GetCityDataCopy(const FString& CityName, FHistoricalCityData& OutCityData);
 
 	/** Get all cities in a region */
 	UFUNCTION(BlueprintCallable, Category = "World Map")
@@ -193,7 +196,7 @@ public:
 	 * Adjacent cities trade unless separated by mountains/sea
 	 */
 	UFUNCTION(BlueprintCallable, Category = "World Map")
-	TArray<TPair<FString, FString>> GeneratePassiveTradeConnections();
+	TArray<FCityConnection> GeneratePassiveTradeConnections();
 
 	/**
 	 * Apply geography modifiers to trade efficiency

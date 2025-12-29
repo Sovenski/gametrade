@@ -504,6 +504,17 @@ FHistoricalCityData* UGTWorldMapSubsystem::GetCityData(const FString& CityName)
 	return HistoricalCities.Find(CityName);
 }
 
+bool UGTWorldMapSubsystem::GetCityDataCopy(const FString& CityName, FHistoricalCityData& OutCityData)
+{
+	FHistoricalCityData* CityData = HistoricalCities.Find(CityName);
+	if (CityData)
+	{
+		OutCityData = *CityData;
+		return true;
+	}
+	return false;
+}
+
 TArray<FString> UGTWorldMapSubsystem::GetCitiesInRegion(const FString& RegionName)
 {
 	FGeographicRegion* Region = GeographicRegions.Find(RegionName);
@@ -707,9 +718,9 @@ void UGTWorldMapSubsystem::IntegrateWithHierarchicalEconomy()
 	UE_LOG(LogTemp, Log, TEXT("Successfully integrated %d cities with hierarchical economy"), HistoricalCities.Num());
 }
 
-TArray<TPair<FString, FString>> UGTWorldMapSubsystem::GeneratePassiveTradeConnections()
+TArray<FCityConnection> UGTWorldMapSubsystem::GeneratePassiveTradeConnections()
 {
-	TArray<TPair<FString, FString>> Connections;
+	TArray<FCityConnection> Connections;
 
 	TArray<FString> CityNames;
 	HistoricalCities.GetKeys(CityNames);
@@ -732,7 +743,7 @@ TArray<TPair<FString, FString>> UGTWorldMapSubsystem::GeneratePassiveTradeConnec
 				// Check if mountains block
 				if (HasLineOfSight(DataA->Coordinates, DataB->Coordinates))
 				{
-					Connections.Add(TPair<FString, FString>(CityNames[i], CityNames[j]));
+					Connections.Add(FCityConnection(CityNames[i], CityNames[j]));
 				}
 			}
 		}

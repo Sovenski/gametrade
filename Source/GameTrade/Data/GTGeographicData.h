@@ -372,6 +372,29 @@ struct GAMETRADE_API FGeographicRegion
 // ========== DISTANCE CALCULATION ==========
 
 /**
+ * Trade connection between two cities (used for passive trade)
+ */
+USTRUCT(BlueprintType)
+struct GAMETRADE_API FCityConnection
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString CityA;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString CityB;
+
+	FCityConnection()
+	{}
+
+	FCityConnection(const FString& InCityA, const FString& InCityB)
+		: CityA(InCityA)
+		, CityB(InCityB)
+	{}
+};
+
+/**
  * Precomputed distance matrix between cities
  */
 USTRUCT(BlueprintType)
